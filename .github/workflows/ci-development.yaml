@@ -1,6 +1,6 @@
 name: wf-ci-development
 on:
-  pull_request: 
+  pull_request:
     branches:
       - develop
 jobs:
@@ -9,8 +9,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-      - name: Install Dependencies
-        run: npm install
       - name: Lint HTML and CSS code
         run: |
           npx htmlhint "**/*.html"
